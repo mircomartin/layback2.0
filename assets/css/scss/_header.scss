@@ -24,6 +24,9 @@
                 border: none;
                 background-color: $blanco;
                 margin-left: 15px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
         .topBar__social {
@@ -62,7 +65,7 @@
 .float-header {
     height: 72px;
     line-height: 72px;
-    border-bottom: 1px solid $gris;
+    border-bottom: 1px solid $grisLight;
     width: 100%;
     z-index: 999;
     background-color: $blanco;
@@ -118,6 +121,9 @@
                 border: none;
                 background-color: $blanco;
                 margin-left: 10px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
 
