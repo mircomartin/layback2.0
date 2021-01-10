@@ -62,7 +62,7 @@
 .float-header {
     height: 72px;
     line-height: 72px;
-    border-bottom: 1px solid #dcdcdc;
+    border-bottom: 1px solid $gris;
     width: 100%;
     z-index: 999;
     background-color: $blanco;
@@ -70,6 +70,7 @@
     top: 0;
     transform: translateY(-120px);
     transition: 0.2s ease;
+
     &__brand {
         img {
             vertical-align: middle;
@@ -140,6 +141,7 @@
     z-index: 998;
     height: 55px;
     line-height: 55px;
+
     .btn-menu {
         display: inline-block;
         font-size: 24px;

@@ -27,6 +27,19 @@ img {
     vertical-align: top;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+
+ul {
+    list-style: none;
+}
+
+.page-container {
+    padding: 50px 0;
+}
+
 main {
     margin-bottom: 1500px;
 }

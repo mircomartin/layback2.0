@@ -1,5 +1,6 @@
 $(document).ready(function () {
     
+    /* Menu Flotante Mostrarse y Ocultarse */
     $(window).scroll(function() {
         var scrollTop = $(window).scrollTop();
 
@@ -10,6 +11,7 @@ $(document).ready(function () {
         }
     });
 
+    /* Menu Mobile Abrir Cerrar */
     $("#btn-menu").click(function (e) { 
         e.preventDefault();
         $("#mobileNav").addClass("show-mobile");
@@ -18,6 +20,13 @@ $(document).ready(function () {
     $("#btn-close").click(function (e) { 
         e.preventDefault();
         $("#mobileNav").removeClass("show-mobile");
+    });
+
+    /* Back to TOP */
+    $("#backTop").click(function (e) { 
+        e.preventDefault();
+        $(window).scrollTop(0);
+
     });
 
 });

@@ -1,0 +1,69 @@
+.footer {
+    background-color: $negroLight;
+    padding: 50px 0;
+    font-family: $fontFamilyHeadings;
+
+    &__brand {
+        img {
+            vertical-align: top;
+        }
+    }
+
+    &__nav {
+        li {
+            margin-bottom: 25px;
+            a {
+                color: $gris;
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__backTop {
+        a {
+            display: inline-block;
+            border-radius: 50%;
+            background-color: $gris;
+            padding: 10px 20px;
+            scroll-behavior: smooth;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__copyright {
+        margin-top: 50px;
+        p {
+            a {
+                text-transform: uppercase;
+                color: $gris;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        text-align: center;
+    
+        &__brand {
+            margin-bottom: 50px;
+        }
+    
+        &__nav {
+            margin-bottom: 25px;
+            li {
+                width: 100%;
+                border-bottom: 1px solid #323232;
+                padding-bottom: 25px;
+            }
+        }
+    
+    }
+}

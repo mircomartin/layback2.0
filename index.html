@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,9 @@
 </head>
 <body>
 
-    <header class="static-header d-none d-lg-block">
+    <!-- Header Static -->
+
+    <header id="static-header" class="static-header d-none d-lg-block">
         <div class="container">
             <div class="row justify-content-center">
                 <section class="col-12 static-header__topBar">
@@ -53,14 +55,14 @@
                 <figure class="col-auto float-header__brand">
                     <img src="/assets/img/brandNew2.0.png" alt="Layback Brand">
                 </figure>
-                <nav class="col float-header__nav">
-                    <a href="#">News</a>
-                    <a href="#">Videos</a>
-                    <a href="#">WSL</a>
-                    <a href="#">Skate</a>
-                    <a href="#">Training</a>
-                    <a href="#">Lifestyle</a>
-                </nav>
+                <ul class="col float-header__nav">
+                    <li><a href="#">News</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">WSL</a></li>
+                    <li><a href="#">Skate</a></li>
+                    <li><a href="#">Training</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                </ul>
                 <div class="col-auto float-header__social-tools">
                     <form class="social-tools__form">
                         <input type="text" placeholder="Search..." id="" class="social-tools__form__text">
@@ -100,10 +102,54 @@
         </div>
     </header>
 
-    <main>
-
+    <main class="page-container home container">
+        <div class="container">
+            <article class="row mainArticle align-items-center no-gutters">
+                <figure class="col-12 col-lg-7 mainArticle__thumb">
+                    <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
+                </figure>
+                <div class="col-12 col-lg-5 mainArticle__text">
+                    <ul class="textMain__category">
+                        <li><a href="">Categorias</a></li>
+                        <li><a href="">Categorias</a></li>
+                    </ul>
+                    <h2 class="textMain__title">
+                        <a href="">Titulo</a>
+                    </h2>
+                    <p class="textMain__date">12/10/2020</p>
+                    <div class="textMain__subtitle">
+                        <p>Hola esta es une extracto</p>
+                    </div>
+                </div>
+            </article>
+        </div>
     </main>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="row align-items-start justify-content-center justify-content-lg-between">
+                <figure class="col-12 col-lg-auto footer__brand">
+                    <img src="/assets/img/brandNew2.0white.png" alt="Layback Brand">
+                </figure>
+                <ul class="col-12 col-lg-5 footer__nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Acerca de mi</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Links</a></li>
+                </ul>
+                <div class="col-12 col-lg-auto footer__backTop">
+                    <a id="backTop">
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="row justify-content-center footer__copyright">
+                <div class="col-auto">
+                    <p><a href="http://" target="_blank" rel="noopener noreferrer">MM Developer © 2020. All Rights Reserved.</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://kit.fontawesome.com/28a0ccd275.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
