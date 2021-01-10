@@ -1,0 +1,207 @@
+.static-header {
+    padding: 10px 0;
+
+    &__topBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .topBar__form {
+            &__text {
+                width: 70px;
+                border: none;
+                border-bottom: 1px solid transparent;
+                transition: .75s ease all;
+                padding: 5px;
+                font-family: $fontFamilyHeadings;
+                text-transform: uppercase;
+                font-size: 12px;
+                &:focus {
+                    width: 150px;
+                    border-bottom: 1px solid $grisLight;
+                }
+            }
+            &__submit {
+                border: none;
+                background-color: $blanco;
+                margin-left: 15px;
+            }
+        }
+        .topBar__social {
+            a {
+                margin-left: 15px;
+                &:first-of-type {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    &__brand {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    &__nav {
+        margin: 15px 0;
+        display: flex;
+        justify-content: space-between;
+        a {
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 500;
+            transition: .2s ease;
+            font-family: $fontFamilyHeadings;
+            letter-spacing: 1px;
+            &:hover {
+                color: $rojo;
+            }
+        }
+    }
+}
+
+.float-header {
+    height: 72px;
+    line-height: 72px;
+    border-bottom: 1px solid #dcdcdc;
+    width: 100%;
+    z-index: 999;
+    background-color: $blanco;
+    position: fixed;
+    top: 0;
+    transform: translateY(-120px);
+    transition: 0.2s ease;
+    &__brand {
+        img {
+            vertical-align: middle;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        a {
+            margin: 0 15px;
+            font-family: $fontFamilyHeadings;;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-decoration: none;
+            color: #231e20;
+            transition: 0.2s ease;
+            font-weight: 500;
+            &:hover {
+                color: $rojo;
+            }
+        }
+    }
+
+    &__social-tools {
+        display: flex;
+        align-items: center;
+
+        .social-tools__form {
+            &__text {
+                width: 70px;
+                border: none;
+                border-bottom: 1px solid transparent;
+                transition: .75s ease all;
+                padding: 5px;
+                font-family: $fontFamilyHeadings;
+                text-transform: uppercase;
+                font-size: 12px;
+                &:focus {
+                    width: 150px;
+                    border-bottom: 1px solid $grisLight;
+                }
+            }
+            &__submit {
+                border: none;
+                background-color: $blanco;
+                margin-left: 10px;
+            }
+        }
+
+        .social-tools__socialNetworks {
+            a {
+                margin-left: 15px;
+            }
+        }
+    }
+}
+
+.show {
+    transform: translateY(0px)!important;
+}
+
+.mobile-header {
+    background-color: $negroDark;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 998;
+    height: 55px;
+    line-height: 55px;
+    .btn-menu {
+        display: inline-block;
+        font-size: 24px;
+        i {
+            color: $blanco;
+        }
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__menu {
+        max-width: 350px;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        background-color: #111;
+        top: 0;
+        bottom: 0;
+        z-index: 999;
+        box-shadow: 4px 4px 25px -10px rgba(0, 0, 0, 0.75);
+        transform: translateX(-120%);
+        transition: 0.25s cubic-bezier(1, 0.1, 0.53, 0.24);
+        padding: 16px;
+        overflow-x: scroll;
+        .btn-close {
+            display: inline-block;
+            width: 100%;
+            text-align: right;
+            font-size: 24px;
+            i {
+                color: $blanco;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: column;
+            padding: 0 12px;
+            li {
+                border-bottom: 1px solid #252525;
+                padding: 16px 8px;
+                list-style: none;
+                width: 100%;
+                text-align: center;
+                a {
+                    color: white;
+                    font-size: 18px;
+                    text-transform: uppercase;
+                    font-family: $fontFamilyHeadings;
+                }
+            }
+        }
+    }
+    &__brand {
+        img {
+            vertical-align: middle;
+        }
+    }
+}
+
+.show-mobile {
+    transform: translateX(0px)!important;
+}
