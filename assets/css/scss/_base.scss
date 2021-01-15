@@ -40,6 +40,128 @@ ul {
     padding: 50px 0;
 }
 
-main {
-    margin-bottom: 1500px;
+.titleSection {
+    font-size: 22px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-family: $fontFamilyMenu;
+    letter-spacing: 1px;
+}
+
+.main-section,
+.training-section {
+    margin: 50px auto;
+    .titleSection {
+        padding-bottom: 20px;
+        border-bottom: 2px solid $grisLight;
+    } 
+}
+
+.archive.category,
+.search.search-results {
+    .titleSection {
+        padding-bottom: 20px;
+        border-bottom: 2px solid $grisLight;
+    } 
+}
+
+h2 {
+    a {
+        color: #000;
+    }
+}
+
+/* ------------------------- */
+/* Newsletter */
+/* ------------------------- */
+
+.tnp.tnp-widget-minimal {
+    .tnp-form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .tnp-email {
+            width: 55%;
+            border-color: 1px solid $grisLight;
+            margin-right: 10px;
+            border-radius: 3px;
+            padding: 8px;
+            margin-bottom: 0;
+            color: $gris;
+            background-color: $blanco;
+            outline: none;
+        }
+        .tnp-submit {
+            width: 40%;
+            background-color: $rojo;
+            text-transform: uppercase;
+            font-size: 16px;
+            color: $blanco;
+            font-weight: 600;
+            border: none;
+            border-radius: 3px;
+            padding: 7px 8px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+/* ------------------------- */
+/* Load More */
+/* ------------------------- */
+.elm-wrapper {
+    margin-top: 30px;
+    .elm-button {
+        outline: none;
+        padding: auto 30px;
+        display: inline-block;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: $blanco;
+        border-radius: 3px;
+        font-family: $fontFamilyBody;
+        border: none;
+        transition: .15s ease opacity;
+        height: 40px;
+        line-height: 40px;
+        &:hover {
+            opacity: .8;
+            cursor: pointer;
+        }
+        &:active,
+        &:focus {
+            background-color: $rojo;
+        }
+
+        .elm-loading-icon {
+            fill: $rojo;
+            stroke: $rojo;
+        }
+    }
+    .elm-button.is-loading {
+        background-color: transparent;
+    }
+    .icon {
+        color: $blanco;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .page-container {
+        padding-top: 70px;
+        padding-bottom: 25px;
+    }
+
+    .home {
+        .main-section,
+        .training-section {
+            margin: 25px auto;
+        } 
+    }
+
 }

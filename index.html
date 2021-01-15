@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Neuton:wght@300;400;700&family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/normalize.css">
     <link rel="stylesheet" href="/assets/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="/assets/css/estilos.css">
@@ -20,9 +20,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <section class="col-12 static-header__topBar">
-                    <form class="topBar__form">
-                        <input type="text" placeholder="Search..." id="" class="topBar__form__text">
-                        <button type="submit" class="topBar__form__submit">
+                    <form class="topBar__form" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <input type="text" placeholder="Search" name="s" id="s" class="topBar__form__text">
+                        <button type="submit" id="searchsubmit" class="topBar__form__submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
@@ -33,15 +33,17 @@
                     </div>
                 </section>
                 <figure class="col-12 static-header__brand">
-                    <a href="#"><img src="/assets/img/brandNew2.0.png" alt="Layback Brand"></a>
+                    <a href="#"><img src="/assets/img/logo-black-bigger.png" alt="Layback Brand"></a>
                 </figure>
                 <nav class="col-5 static-header__nav">
-                    <a href="#">News</a>
-                    <a href="#">Videos</a>
-                    <a href="#">WSL</a>
-                    <a href="#">Skate</a>
-                    <a href="#">Training</a>
-                    <a href="#">Lifestyle</a>
+                    <ul>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Videos</a></li>
+                        <li><a href="#">WSL</a></li>
+                        <li><a href="#">Skate</a></li>
+                        <li><a href="#">Training</a></li>
+                        <li><a href="#">Lifestyle</a></li>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -53,7 +55,7 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <figure class="col-auto float-header__brand">
-                    <img src="/assets/img/brandNew2.0.png" alt="Layback Brand">
+                    <img src="/assets/img/logo-black.png" alt="Layback Brand">
                 </figure>
                 <ul class="col float-header__nav">
                     <li><a href="#">News</a></li>
@@ -64,9 +66,9 @@
                     <li><a href="#">Lifestyle</a></li>
                 </ul>
                 <div class="col-auto float-header__social-tools">
-                    <form class="social-tools__form">
-                        <input type="text" placeholder="Search..." id="" class="social-tools__form__text">
-                        <button type="submit" class="social-tools__form__submit">
+                    <form class="social-tools__form" role="search" method="get" id="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+                        <input type="text" placeholder="Search" name="s" id="s" class="social-tools__form__text">
+                        <button type="submit" id="searchsubmit" class="social-tools__form__submit">
                             <i class="fas fa-search"></i>
                         </button>
                     </form>
@@ -102,28 +104,241 @@
         </div>
     </header>
 
-    <main class="page-container home container">
+    <main class="page-container home">
         <div class="container">
-            <article class="row mainArticle align-items-center no-gutters">
-                <figure class="col-12 col-lg-7 mainArticle__thumb">
+
+            <!-- Ultimo posteo -->
+            <article class="row main-article align-items-center no-gutters">
+                <figure class="col-12 col-lg-7 main-article__thumb">
                     <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
                 </figure>
-                <div class="col-12 col-lg-5 mainArticle__text">
-                    <ul class="textMain__category">
-                        <li><a href="">Categorias</a></li>
-                        <li><a href="">Categorias</a></li>
-                    </ul>
-                    <h2 class="textMain__title">
+                <div class="col-12 col-lg-5 main-article__text">
+                    <div class="main-article__text__category">
+                        <ul>
+                            <li><a href="">Categorias</a></li>
+                            <li><a href="">Categorias</a></li>
+                        </ul>
+                    </div>
+                    <h2 class="main-article__text__title">
                         <a href="">Titulo</a>
                     </h2>
-                    <p class="textMain__date">12/10/2020</p>
-                    <div class="textMain__subtitle">
+                    <p class="main-article__text__date">12/10/2020</p>
+                    <div class="main-article__text__subtitle">
                         <p>Hola esta es une extracto</p>
                     </div>
                 </div>
             </article>
+
         </div>
+
+        <!-- Destacados -->
+        <div class="wrapperHorizontal">
+            <div class="container">
+                <section class="row">
+                    <div class="col-12">
+                        <h3 class="titleSection">Recomendadas</h3>
+                    </div>
+                    <article class="col-12 col-lg-4 articleHorizontal">
+                        <figure class="articleHorizontal__thumb">
+                            <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
+                        </figure>
+                        <div class="articleHorizontal__text">
+                            <div class="articleHorizontal__text__category">
+                                <ul>
+                                    <li><a href="">Categorias</a></li>
+                                    <li><a href="">Categorias</a></li>
+                                </ul>
+                            </div>
+                            <h2 class="articleHorizontal__text__title">
+                                <a href="">Titulo</a>
+                            </h2>
+                            <p class="articleHorizontal__text__date">12/10/2020</p>
+                            <div class="articleHorizontal__text__subtitle">
+                                <p>Hola esta es une extracto</p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="col-12 col-lg-4 articleHorizontal">
+                        <figure class="articleHorizontal__thumb">
+                            <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
+                        </figure>
+                        <div class="articleHorizontal__text">
+                            <div class="articleHorizontal__text__category">
+                                <ul>
+                                    <li><a href="">Categorias</a></li>
+                                    <li><a href="">Categorias</a></li>
+                                </ul>
+                            </div>
+                            <h2 class="articleHorizontal__text__title">
+                                <a href="">Titulo</a>
+                            </h2>
+                            <p class="articleHorizontal__text__date">12/10/2020</p>
+                            <div class="articleHorizontal__text__subtitle">
+                                <p>Hola esta es une extracto</p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </div>
+        </div>
+
+        <!-- Latest + Aside -->
+        <div class="container main-section">
+            <div class="row justify-content-between">
+                <section class="col-12 col-lg-7 latest">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="titleSection">Más Recientes</h2>
+                        </div>
+                    </div>
+                    <section class="posts">
+                        <article class="row post no-gutters">
+                            <figure class="col-12 col-lg-6 post__thumb">
+                                <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
+                            </figure>
+                            <div class="col-12 col-lg-6 post__text">
+                                <div class="post__text__category">
+                                    <ul>
+                                        <li><a href="">Categorias</a></li>
+                                        <li><a href="">Categorias</a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="post__text__title">
+                                    <a href="">Esto es un titulo</a>
+                                </h2>
+                                <p class="post__text__date">12/10/2020</p>
+                                <div class="post__text__subtitle">
+                                    <p>Hola esta es une extracto</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="row post no-gutters">
+                            <figure class="col-12 col-lg-6 post__thumb">
+                                <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
+                            </figure>
+                            <div class="col-12 col-lg-6 post__text">
+                                <div class="post__text__category">
+                                    <ul>
+                                        <li><a href="">Categorias</a></li>
+                                        <li><a href="">Categorias</a></li>
+                                    </ul>
+                                </div>
+                                <h2 class="post__text__title">
+                                    <a href="">Esto es un titulo</a>
+                                </h2>
+                                <p class="post__text__date">12/10/2020</p>
+                                <div class="post__text__subtitle">
+                                    <p>Hola esta es une extracto</p>
+                                </div>
+                            </div>
+                        </article>
+                        
+                    </section>
+                </section>
+                <aside class="d-none d-lg-block col-lg-4 sidebar">
+
+                    <!-- Social Area -->
+                    <div class="row sidebar__socialNetwork">
+                        <div class="col-12">
+                            <h2 class="titleSection">Follow Me</h2>
+                        </div>
+                        <section class="col-12 sidebar__socialNetwork__links">
+                            <a class="instagram" href="https://www.instagram.com/layback.ar" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a class="facebook" href="https://www.facebook.com/mircocmartin" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
+                        </section>
+                    </div>
+
+                    <!-- Widget Area -->
+                    <div class="row d-none d-lg-block sidebar__widget-area">
+                        <div class="col-12">
+                            <div class="sidebar__widget-area__wrapper">
+                                <div class="widget">
+                                    <h3 class="titleSection">Widget 1</h3>
+                                    <p>
+                                        <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- Lifestyle -->
+        <div class="wrapperHorizontal-dark">
+            <div class="container">
+                <section class="row">
+                    <div class="col-12">
+                        <h3 class="titleSection">Lifestyle</h3>
+                    </div>
+                    <div class="col-12 col-lg-3 articleHorizontal">
+                        <figure class="articleHorizontal__thumb">
+                            <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
+                        </figure>
+                        <div class="articleHorizontal__text">
+                            <h2 class="articleHorizontal__text__title">
+                                <a href="">Titulo</a>
+                            </h2>
+                            <p class="articleHorizontal__text__date">12/10/2020</p>
+                            <div class="articleHorizontal__text__subtitle">
+                                <p>Hola esta es une extracto</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Training -->
+        <div class="training-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-7">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2 class="titleSection">Training</h2>
+                            </div>
+                        </div>
+                        <section class="posts">
+                            <article class="row post no-gutters">
+                                <figure class="col-12 col-lg-6 post__thumb">
+                                    <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
+                                </figure>
+                                <div class="col-12 col-lg-6 post__text">
+                                    <div class="post__text__category">
+                                        <ul>
+                                            <li><a href="">Categorias</a></li>
+                                            <li><a href="">Categorias</a></li>
+                                        </ul>
+                                    </div>
+                                    <h2 class="post__text__title">
+                                        <a href="">Titulo</a>
+                                    </h2>
+                                    <p class="post__text__date">12/10/2020</p>
+                                    <div class="post__text__subtitle">
+                                        <p>Hola esta es une extracto</p>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
+
+    <div class="container">
+        <div class="row d-block justify-content-center footer__widget-area">
+            <div class="col-auto">
+                <div class="footer__widget-area__wrapper">
+                    <img src="/assets/img/fotoPrueba.webp" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="container">
@@ -131,12 +346,22 @@
                 <figure class="col-12 col-lg-auto footer__brand">
                     <img src="/assets/img/brandNew2.0white.png" alt="Layback Brand">
                 </figure>
-                <ul class="col-12 col-lg-5 footer__nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Acerca de mi</a></li>
-                    <li><a href="#">Contacto</a></li>
-                    <li><a href="#">Links</a></li>
-                </ul>
+                <div class="col-12 col-lg-auto footer__nav">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Acerca de mi</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Links</a></li>
+                    </ul>
+                </div>
+                <section class="col-12 col-lg-auto footer__socialNetworks">
+                    <h3>Follow Me</h3>
+                    <div>
+                        <a class="instagram" href="https://www.instagram.com/layback.ar" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a class="facebook" href="https://www.facebook.com/mircocmartin" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="youtube" href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </section>
                 <div class="col-12 col-lg-auto footer__backTop">
                     <a id="backTop">
                         <i class="fas fa-arrow-up"></i>

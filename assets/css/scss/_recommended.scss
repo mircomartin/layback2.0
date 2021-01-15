@@ -1,0 +1,164 @@
+.wrapperHorizontal {
+    padding: 50px 0;
+    background-color: #F5F5F5;
+
+    .articleHorizontal {
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+        
+        &__thumb {
+            margin-bottom: 16px;
+            overflow: hidden;
+            img {
+                object-fit: cover;
+                min-height: 210px;
+                height: 210px;
+                max-height: 210px;
+                width: 100%;
+                transition: all .9s ease;
+            }
+        }
+
+        &__text {
+        
+            &__category {
+                margin-bottom: 7px;
+                ul {
+                    display: flex;
+                    li {
+                        a {
+                            color: $gris;
+                            font-weight: 700;
+                            text-transform: uppercase;
+                            margin-right: 10px;
+                            font-size: 12px;
+                            transition: color .15s linear;
+                            line-height: 21px;
+                            &:hover {
+                                color: $rojoHover;
+                            }
+                        }
+                    }
+                }
+            }
+            &__title {
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                a {
+                    transition: color .15s linear;
+                    &:hover {
+                        color: $rojoHover;
+                    }
+                }
+            } 
+            &__date {
+                color: $rojo;
+                text-transform: uppercase;
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            &__subtitle {
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.wrapperHorizontal-dark {
+    padding: 50px 0;
+    background-color: $negroLight;
+
+    h3.titleSection {
+        color: $blanco;
+    }
+    .articleHorizontal {
+        &:hover {
+            img {
+                transform: scale(1.05);
+            }
+        }
+        
+        &__thumb {
+            margin-bottom: 16px;
+            overflow: hidden;
+            img {
+                object-fit: cover;
+                min-height: 210px;
+                height: 210px;
+                max-height: 210px;
+                width: 100%;
+                transition: all .9s ease;
+            }
+        }
+
+        &__text {
+             
+            &__title {
+                font-size: 16px;
+                line-height: 22px;
+                margin-bottom: 12px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                a {
+                    color: $blanco;
+                    transition: color .15s linear;
+                    &:hover {
+                        color: $rojoHover;
+                    }
+                }
+            } 
+            &__date {
+                color: $gris;
+                text-transform: uppercase;
+                font-size: 12px;
+                margin-bottom: 15px;
+            }
+            &__subtitle {
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                    color: $blanco;
+                }
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapperHorizontal,
+    .wrapperHorizontal-dark {
+        padding: 30px 0;
+
+        .articleHorizontal {
+            margin-bottom: 40px;
+            &__thumb {
+                img {
+                    min-height: auto;
+                    height: auto;
+                    max-height: 100%;
+                }
+            }
+
+        }
+    }
+
+}

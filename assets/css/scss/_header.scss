@@ -7,12 +7,12 @@
         align-items: center;
         .topBar__form {
             &__text {
-                width: 70px;
+                width: 55px;
                 border: none;
                 border-bottom: 1px solid transparent;
                 transition: .75s ease all;
                 padding: 5px;
-                font-family: $fontFamilyHeadings;
+                font-family: $fontFamilyMenu;
                 text-transform: uppercase;
                 font-size: 12px;
                 &:focus {
@@ -46,19 +46,23 @@
 
     &__nav {
         margin: 15px 0;
-        display: flex;
-        justify-content: space-between;
-        a {
-            text-transform: uppercase;
-            font-size: 12px;
-            font-weight: 500;
-            transition: .2s ease;
-            font-family: $fontFamilyHeadings;
-            letter-spacing: 1px;
-            &:hover {
-                color: $rojo;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            li {
+                a {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    transition: .2s ease color;
+                    font-family: $fontFamilyMenu;
+                    letter-spacing: 1px;
+                    &:hover {
+                        color: $rojo;
+                    }
+                }
             }
         }
+        
     }
 }
 
@@ -84,14 +88,13 @@
         display: flex;
         a {
             margin: 0 15px;
-            font-family: $fontFamilyHeadings;;
+            font-family: $fontFamilyMenu;
             text-transform: uppercase;
             font-size: 12px;
             letter-spacing: 1px;
             text-decoration: none;
             color: #231e20;
-            transition: 0.2s ease;
-            font-weight: 500;
+            transition: .2s ease color;
             &:hover {
                 color: $rojo;
             }
@@ -104,12 +107,12 @@
 
         .social-tools__form {
             &__text {
-                width: 70px;
+                width: 55px;
                 border: none;
                 border-bottom: 1px solid transparent;
                 transition: .75s ease all;
                 padding: 5px;
-                font-family: $fontFamilyHeadings;
+                font-family: $fontFamilyMenu;
                 text-transform: uppercase;
                 font-size: 12px;
                 &:focus {
@@ -198,7 +201,7 @@
                     color: white;
                     font-size: 18px;
                     text-transform: uppercase;
-                    font-family: $fontFamilyHeadings;
+                    font-family: $fontFamilyMenu;
                 }
             }
         }

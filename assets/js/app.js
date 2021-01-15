@@ -29,4 +29,8 @@ $(document).ready(function () {
 
     });
 
+    /* Button Load More */
+    $('.elm-button-text').prepend('<i class="fas fa-chevron-down icon"></i>');
+    $('.elm-button-text').append('<i class="fas fa-chevron-down icon"></i>');
+
 });
