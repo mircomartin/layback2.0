@@ -49,7 +49,8 @@ ul {
 }
 
 .main-section,
-.training-section {
+.training-section,
+.error404 {
     margin: 50px auto;
     .titleSection {
         padding-bottom: 20px;
@@ -74,7 +75,6 @@ h2 {
 /* ------------------------- */
 /* Newsletter */
 /* ------------------------- */
-
 .tnp.tnp-widget-minimal {
     .tnp-form {
         display: flex;
@@ -150,6 +150,61 @@ h2 {
     }
 }
 
+/* ------------------------- */
+/* Formulario Contacto */
+/* ------------------------- */
+.wpcf7-form {
+    margin-top: 20px;
+	padding: 0 80px;
+	font-size: 16px;
+	p {
+		overflow: hidden;
+		margin-bottom: 0;
+		label {
+			font-weight: 700;
+			width: 100%;
+			margin-bottom: 16px;
+			.wpcf7-form-control-wrap {
+				display: inline-block;
+				width: 100%;
+				margin-top: 8px;
+				.wpcf7-form-control {
+					height: 40px;
+					line-height: 40px;
+                    width: 100%;
+                    border: none;
+					border-bottom: 1px solid $grisLight;
+					outline: 0;
+					padding: 0 8.4px;
+                }
+				.wpcf7-textarea {
+					height: 132px;
+					min-height: 132px;
+					max-height: 148px;
+                }
+            }
+        }
+		.wpcf7-submit {
+			background: $rojo;
+			border: none;
+			color: $blanco;
+			text-transform: uppercase;
+			width: 6rem;
+			margin-bottom: 24px;
+			margin-top: 0;
+			font-size: 16px;
+            transition: .15s ease all;
+			float: right;
+			line-height: 40px;
+			height: 40px;
+            cursor: pointer;
+            border-radius: 3px;
+			&:hover {
+				background: $rojoHover;
+            }
+        }
+    }
+}
 /* ------------------------- */
 /* WORDPRESS CSS */
 /* ------------------------- */
